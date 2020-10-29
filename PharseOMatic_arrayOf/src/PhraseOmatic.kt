@@ -13,7 +13,11 @@ fun main(args: Array<String>) {
     val rand1 = (Math.random() * arraySize1).toInt()
     val rand2 = (Math.random() * arraySize2).toInt()
     val rand3 = (Math.random() * arraySize3).toInt()
-
+    
+    // String 模板，若要在String加上變數的值，只要在String裡面加上 $ 即可。
     val phrase = "${wordArray1[rand1]}  ${wordArray2[rand2]}  ${wordArray3[rand3]}"
     println(phrase)
+    // 在String裡面計算運算式
+    val word = "wordArray is ${if (wordArray1.size > 10) "large" else "small"}"
+    println(word)
 }
